@@ -3,19 +3,19 @@ package User;
 import java.util.Scanner;
 
 public class BankAccount {
-    private static String owner;
+    private String owner;
 
     public BankAccount(){
         setOwnerName();
     }
 
-    private static void setOwnerName(){
+    private void setOwnerName(){
         Scanner myObj = new Scanner(System.in);
         System.out.print("Please enter the User name: ");
-        owner = myObj.nextLine();
+        this.owner = myObj.nextLine();
     }
 
-    public static String getOwnerName(){
-        return owner;
+    public String getOwnerName(){
+        return this.owner;
     }
 }
