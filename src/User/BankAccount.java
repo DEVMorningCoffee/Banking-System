@@ -1,9 +1,11 @@
 package User;
 
+import User.CheckingAccount;
 import java.util.Scanner;
 
-public class BankAccount {
+public class BankAccount extends CheckingAccount {
     private String owner;
+    CheckingAccount checkingAccount = new CheckingAccount();
 
     public BankAccount(){
         setOwnerName();
@@ -17,5 +19,9 @@ public class BankAccount {
 
     public String getOwnerName(){
         return this.owner;
+    }
+
+    public float getOwnerBalance(){
+        return checkingAccount.getBalance();
     }
 }

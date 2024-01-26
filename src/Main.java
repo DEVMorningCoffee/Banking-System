@@ -3,6 +3,6 @@ public class Main {
     public static void main(String[] args){
         BankAccount user = new BankAccount();
 
-        System.out.println(user.getOwnerName());
+        System.out.println(user.getOwnerBalance());
     }
 }
