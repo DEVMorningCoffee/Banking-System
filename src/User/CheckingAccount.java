@@ -18,4 +18,9 @@ public class CheckingAccount {
     public float getBalance(){
         return this.balance;
     }
+
+    public void depositBalance(float amount){
+        amount = formatBalance(amount);
+        this.balance += amount;
+    }
 }

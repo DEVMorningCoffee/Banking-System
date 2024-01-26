@@ -24,4 +24,9 @@ public class BankAccount extends CheckingAccount {
     public float getOwnerBalance(){
         return checkingAccount.getBalance();
     }
+
+    public float depositOwnerBalance(float amount){
+        checkingAccount.depositBalance(amount);
+        return checkingAccount.getBalance();
+    }
 }
