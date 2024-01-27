@@ -1,14 +1,17 @@
 package User;
 
-import User.CheckingAccount;
+import Balance.CheckingAccount;
+import Balance.SavingAccount;
 import java.util.Scanner;
 
 public class BankAccount{
     private String owner;
     private final CheckingAccount checkingAccount;
+    private final SavingAccount savingAccount;
 
-    public BankAccount(CheckingAccount checkingAccount){
+    public BankAccount(CheckingAccount checkingAccount, SavingAccount savingAccount){
         this.checkingAccount = checkingAccount;
+        this.savingAccount = savingAccount;
         setOwnerName();
     }
 
@@ -22,12 +25,21 @@ public class BankAccount{
         return this.owner;
     }
 
-    public float getOwnerBalance(){
+    public float getOwnerCheckingBalance(){
         return checkingAccount.getBalance();
     }
 
-    public float depositOwnerBalance(float amount){
+    public float getOwnerSavingBalance(){
+        return savingAccount.getBalance();
+    }
+
+    public float depositOwnerCheckingBalance(float amount){
         checkingAccount.depositBalance(amount);
         return checkingAccount.getBalance();
+    }
+
+    public float depositOwnerSavingBalance(float amount){
+        savingAccount.depositBalance(amount);
+        return savingAccount.getBalance();
     }
 }
