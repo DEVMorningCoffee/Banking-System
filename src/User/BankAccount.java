@@ -3,11 +3,12 @@ package User;
 import User.CheckingAccount;
 import java.util.Scanner;
 
-public class BankAccount extends CheckingAccount {
+public class BankAccount{
     private String owner;
-    CheckingAccount checkingAccount = new CheckingAccount();
+    private final CheckingAccount checkingAccount;
 
-    public BankAccount(){
+    public BankAccount(CheckingAccount checkingAccount){
+        this.checkingAccount = checkingAccount;
         setOwnerName();
     }
 
