@@ -8,10 +8,6 @@ public class BasicAccount {
     public BasicAccount(float startAmount) {
     }
 
-//    public BasicAccount(float startAmount){
-//        this.balance = startAmount;
-//    }
-
     protected void setBalance(float setAmount){
         this.balance = formatBalance(setAmount);
     }
@@ -23,7 +19,7 @@ public class BasicAccount {
     }
 
     public float getBalance(){
-        return this.balance;
+        return formatBalance(this.balance);
     }
 
     public void depositBalance(float amount){

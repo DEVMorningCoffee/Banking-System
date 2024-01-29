@@ -1,7 +1,4 @@
 package Balance;
-import Balance.BasicAccount;
-
-import java.text.DecimalFormat;
 
 public class SavingAccount extends BasicAccount {
     private final float interestRate;
@@ -11,8 +8,8 @@ public class SavingAccount extends BasicAccount {
         this.interestRate = interestRate;
     }
 
-    public float calulateInterest(){
-        return getBalance() * this.interestRate;
+    public void calculateInterest(){
+        float interest = getBalance() * this.interestRate;
+        this.depositBalance(interest);
     }
-
 }
