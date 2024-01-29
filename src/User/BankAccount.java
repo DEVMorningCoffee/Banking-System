@@ -42,4 +42,9 @@ public class BankAccount{
         savingAccount.depositBalance(amount);
         return savingAccount.getBalance();
     }
+
+    public void depositOwnerSavingInterest(){
+        // This will later be implemented to be ever 365days or every minute for this program
+        this.savingAccount.calculateInterest();
+    }
 }
