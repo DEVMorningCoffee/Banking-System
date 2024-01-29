@@ -5,7 +5,14 @@ import java.text.DecimalFormat;
 public class BasicAccount {
     private float balance = 0f;
 
-    private void setBalance(float setAmount){
+    public BasicAccount(float startAmount) {
+    }
+
+//    public BasicAccount(float startAmount){
+//        this.balance = startAmount;
+//    }
+
+    protected void setBalance(float setAmount){
         this.balance = formatBalance(setAmount);
     }
 
