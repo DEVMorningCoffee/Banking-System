@@ -1,10 +1,13 @@
 import User.BankAccount;
-import User.CheckingAccount;
+import Balance.CheckingAccount;
+import Balance.SavingAccount;
 public class Main {
     public static void main(String[] args){
-        CheckingAccount checkingAccount = new CheckingAccount();
-        BankAccount user = new BankAccount(checkingAccount);
+        CheckingAccount checkingAccount = new CheckingAccount(100f);
+        SavingAccount savingAccount = new SavingAccount(0);
+        BankAccount user = new BankAccount(checkingAccount, savingAccount);
 
-        System.out.println(user.depositOwnerBalance(2000f));
+        System.out.println(user.getOwnerSavingBalance());
+        System.out.println(user.getOwnerCheckingBalance());
     }
 }
