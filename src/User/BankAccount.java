@@ -3,26 +3,45 @@ package User;
 import Balance.CheckingAccount;
 import Balance.SavingAccount;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class BankAccount{
-    private String owner;
+    private String name;
+    private String id;
+    private String email;
+    private String password;
     private final CheckingAccount checkingAccount;
     private final SavingAccount savingAccount;
 
     public BankAccount(CheckingAccount checkingAccount, SavingAccount savingAccount){
         this.checkingAccount = checkingAccount;
         this.savingAccount = savingAccount;
-        setOwnerName();
+        setupUserInfo();
+    }
+
+    private void setupUserInfo(){
+
+        Scanner myObj = new Scanner(System.in);
+        System.out.print("Name: ");
+        this.name = myObj.nextLine();
+
+        System.out.print("email: ");
+        this.email = myObj.nextLine();
+
+        System.out.print("Password: ");
+        this.password = myObj.nextLine();
+
+        this.id = UUID.randomUUID().toString();
     }
 
     private void setOwnerName(){
         Scanner myObj = new Scanner(System.in);
         System.out.print("Please enter the User name: ");
-        this.owner = myObj.nextLine();
+        this.name = myObj.nextLine();
     }
 
     public String getOwnerName(){
-        return this.owner;
+        return this.name;
     }
 
     public float getOwnerCheckingBalance(){
