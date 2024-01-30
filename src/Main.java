@@ -1,6 +1,6 @@
-import User.BankAccount;
-import Balance.CheckingAccount;
-import Balance.SavingAccount;
+import com.bankingsystem.user.BankAccount;
+import com.bankingsystem.balance.CheckingAccount;
+import com.bankingsystem.balance.SavingAccount;
 public class Main {
     public static void main(String[] args){
         CheckingAccount checkingAccount = new CheckingAccount(100f);

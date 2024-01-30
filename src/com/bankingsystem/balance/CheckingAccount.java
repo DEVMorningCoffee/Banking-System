@@ -1,7 +1,4 @@
-package Balance;
-import Balance.BasicAccount;
-
-import java.text.DecimalFormat;
+package com.bankingsystem.balance;
 
 public class CheckingAccount extends BasicAccount{
     public CheckingAccount(float startAmount) {

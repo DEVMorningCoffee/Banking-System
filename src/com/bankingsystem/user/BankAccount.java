@@ -1,7 +1,7 @@
-package User;
+package com.bankingsystem.user;
 
-import Balance.CheckingAccount;
-import Balance.SavingAccount;
+import com.bankingsystem.balance.CheckingAccount;
+import com.bankingsystem.balance.SavingAccount;
 import java.util.Scanner;
 import java.util.UUID;
 

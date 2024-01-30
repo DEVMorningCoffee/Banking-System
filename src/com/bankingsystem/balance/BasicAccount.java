@@ -1,4 +1,4 @@
-package Balance;
+package com.bankingsystem.balance;
 
 import java.text.DecimalFormat;
 

@@ -1,4 +1,4 @@
-package Balance;
+package com.bankingsystem.balance;
 
 public class SavingAccount extends BasicAccount {
     private final float interestRate;
