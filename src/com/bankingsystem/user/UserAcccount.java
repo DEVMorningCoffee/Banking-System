@@ -34,6 +34,7 @@ public class UserAcccount {
 
         System.out.print("Password: ");
         this.password = myObj.nextLine();
+        validateUser.passwordValidator(this.password);
 
         this.id = UUID.randomUUID().toString();
     }
