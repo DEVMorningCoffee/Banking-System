@@ -1,11 +1,12 @@
 package com.bankingsystem.user;
 
-import com.bankingsystem.balance.CheckingAccount;
-import com.bankingsystem.balance.SavingAccount;
 import java.util.Scanner;
 import java.util.UUID;
+import com.bankingsystem.balance.CheckingAccount;
+import com.bankingsystem.balance.SavingAccount;
+import com.bankingsystem.user.ValidateUser;
 
-public class BankAccount{
+public class UserAcccount {
     private String name;
     private String id;
     private String email;
@@ -13,7 +14,7 @@ public class BankAccount{
     private final CheckingAccount checkingAccount;
     private final SavingAccount savingAccount;
 
-    public BankAccount(CheckingAccount checkingAccount, SavingAccount savingAccount){
+    public UserAcccount(CheckingAccount checkingAccount, SavingAccount savingAccount){
         this.checkingAccount = checkingAccount;
         this.savingAccount = savingAccount;
         setupUserInfo();
@@ -21,12 +22,15 @@ public class BankAccount{
 
     private void setupUserInfo(){
 
+        ValidateUser validateUser = new ValidateUser();
+
         Scanner myObj = new Scanner(System.in);
         System.out.print("Name: ");
         this.name = myObj.nextLine();
 
         System.out.print("email: ");
         this.email = myObj.nextLine();
+        validateUser.emailValidator(this.email);
 
         System.out.print("Password: ");
         this.password = myObj.nextLine();
